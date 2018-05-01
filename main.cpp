@@ -85,14 +85,14 @@ private:
       if (!supported) {
         std::cout << "required instance extensions" << std::endl;
         for (int i = 0; i < requiredExtensionsCount; ++i) {
-	  std::cout << "\t" << requiredExtensions[i] << std::endl;
+          std::cout << "\t" << requiredExtensions[i] << std::endl;
         }
 
         std::cout << "available extensions:" << std::endl;
         for (const auto& extension : availableExtensions) {
-	  std::cout << "\t" << extension.extensionName << std::endl;
+          std::cout << "\t" << extension.extensionName << std::endl;
         }
-	throw std::runtime_error("Not all required extensions are supported!");
+        throw std::runtime_error("Not all required extensions are supported!");
       }
     }
   }
